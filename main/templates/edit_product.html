@@ -1,7 +1,10 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
+
+{% load static %}
 
 {% block content %}
-<h1>Add New Product</h1>
+
+<h1>Edit Product</h1>
 
 <form method="POST">
     {% csrf_token %}
@@ -10,9 +13,9 @@
         <tr>
             <td></td>
             <td>
-                <input type="submit" class="btn btn-primary" value="Add Product"/>
+                <input type="submit" class="btn btn-primary" value="Save edits"/>
                 <a href="{% url 'main:show_main' %}">
-                    <button type="button" class="btn btn-outline-danger">Cancel</button>
+                    <button type="button" class="btn btn-outline-danger">Discard</button>
                 </a>
             </td>
         </tr>
